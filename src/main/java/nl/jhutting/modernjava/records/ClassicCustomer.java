@@ -21,8 +21,12 @@ public final class ClassicCustomer {
 
     @Override
     public boolean equals(Object object) {
-        if (this == object) return true;
-        if (!(object instanceof ClassicCustomer other)) return false;
+        if (this == object) {
+            return true;
+        }
+        if (!(object instanceof ClassicCustomer other)) {
+            return false;
+        }
         return id == other.id && Objects.equals(name, other.name);
     }
 
